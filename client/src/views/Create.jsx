@@ -9,7 +9,7 @@ const Create = () => {
 
   const createProject = (project) => {
     axios
-      .post(`http://localhost:8000/project/new`, project)
+      .post(`http://localhost:8000/api/project/new`, project)
       .then((res) => {
         navigate("/");
       })

@@ -7,14 +7,14 @@ const BackLog = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/project/all")
+      .get("http://localhost:8000/api/project/all")
       .then((res) => setProjectList(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const updateProject = (e, project) => {
     axios
-      .put(`http://localhost:8000/project/update/${project._id}`, {
+      .put(`http://localhost:8000/api/project/update/${project._id}`, {
         log: "inProgress",
       })
       .then((res) => {

@@ -6,14 +6,14 @@ const Completed = (props) => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/project/all")
+      .get("http://localhost:8000/api/project/all")
       .then((res) => setProjectList(res.data))
       .catch((err) => console.log(err));
   }, []);
 
   const handleDelete = (projectId) => {
     axios
-      .delete(`http://localhost:8000/project/delete/${projectId}`)
+      .delete(`http://localhost:8000/api/project/delete/${projectId}`)
       .then((res) => props.updateList(projectId))
       .catch((err) => console.log(err));
   };

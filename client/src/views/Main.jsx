@@ -15,7 +15,7 @@ const Main = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/project/all")
+      .get("http://localhost:8000/api/project/all")
       .then((res) => setProjectList(res.data))
       .catch((err) => console.log(err));
   }, [refresh]);
